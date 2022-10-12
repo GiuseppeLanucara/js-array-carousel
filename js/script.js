@@ -25,10 +25,23 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
     const immaginePartenza = document.getElementsByClassName("image");
     console.log(immaginePartenza);
 
-    immaginePartenza[0].classList.add("visibile");
+    let posizioneSlider = 0
+    immaginePartenza[posizioneSlider].classList.add("visibile");
 
-    const arrUp = document.getElementById("arrup");
-    const arrDown = document.getElementById("arrdown");
+    const arrUp = document.querySelector(".up");
+    const arrDown = document.querySelector(".down");
 
     arrUp.addEventListener("click", function () { 
-        immaginePartenza ++ });
+        if (posizioneSlider < 4) {
+        immaginePartenza[posizioneSlider].classList.remove("visibile");
+        posizioneSlider++;
+        immaginePartenza[posizioneSlider].classList.add("visibile")
+    }});
+
+    arrDown.addEventListener("click", function () { 
+        if (posizioneSlider > 0) {
+        immaginePartenza[posizioneSlider].classList.remove("visibile");
+        posizioneSlider--;
+        immaginePartenza[posizioneSlider].classList.add("visibile")
+
+    }});
