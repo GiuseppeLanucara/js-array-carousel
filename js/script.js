@@ -8,3 +8,10 @@ Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specif
 Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.
 **MILESTONE 3**
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.*/
+
+//array con all'interno le img
+
+const raccoltaImmagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
+
+for (let i = 0; i < raccoltaImmagini.length; i++)
+console.log(raccoltaImmagini[i]);
