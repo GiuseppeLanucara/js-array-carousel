@@ -56,6 +56,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider++;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        //BONUS 2
         thumPart[opacity].classList.remove("opa")
         opacity++;
         thumPart[opacity].classList.add("opa")
@@ -65,6 +66,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider=0;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        //BONUS 2
         thumPart[opacity].classList.remove("opa")
         opacity = 0;
         thumPart[opacity].classList.add("opa")
@@ -77,6 +79,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider--;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        // BONUS 2
         thumPart[opacity].classList.remove("opa")
         opacity--;
         thumPart[opacity].classList.add("opa")
@@ -86,6 +89,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider = 4;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        // BONUS 2
         thumPart[opacity].classList.remove("opa")
         opacity = 4;
         thumPart[opacity].classList.add("opa")

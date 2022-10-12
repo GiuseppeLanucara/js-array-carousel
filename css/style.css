@@ -85,6 +85,7 @@ body {
     border-color: aqua;
 }
 
+/* CONTENITORE IMMAGINI DESTRA MINIATURA */
 .thumbnail {
     height: 80vh;
     width: 150px;
@@ -92,6 +93,7 @@ body {
     flex-direction: column;
 }
 
+/* EFFETTO OPACITY */
 .opa{
     opacity: .4;
 }
