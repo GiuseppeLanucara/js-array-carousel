@@ -13,5 +13,11 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 
 const raccoltaImmagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
 
-for (let i = 0; i < raccoltaImmagini.length; i++)
-console.log(raccoltaImmagini[i]);
+const contenitore = document.getElementsByClassName("raccolta");
+console.log(contenitore);
+
+for (let i = 0; i < raccoltaImmagini.length; i++) {
+    const element = `<img src="${raccoltaImmagini[i]}" alt="">`
+    console.log(element);
+    contenitore.innerHTML += element;
+};
