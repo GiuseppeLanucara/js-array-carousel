@@ -9,6 +9,14 @@ Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella mile
 **MILESTONE 3**
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.*/
 
+/**BONUS 1:**
+Aggiungere il **ciclo infinito** del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.*/
+
+/**BONUS 2:**
+Aggiungere la visualizzazione di tutte le thumbnails sulla destra dell’immagine grande attiva, come nello screenshot proposto. Tutte le miniature avranno un layer di opacità scura, tranne quella corrispondente all’immagine attiva, che invece avrà un bordo colorato.
+Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di miniatura attiva.*/
+
+
 //array con all'interno le img
 const raccoltaImmagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
 
@@ -27,8 +35,17 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
     const immaginePartenza = document.getElementsByClassName("image");
     console.log(immaginePartenza);
 
+    //BONUS2
+    const thumPart = document.getElementsByClassName("th");
+
+
     let posizioneSlider = 0
     immaginePartenza[posizioneSlider].classList.add("visibile");
+
+    //BONUS 2
+    let opacity = 0;
+    thumPart[opacity].classList.add("opa")
+    
 
     const arrUp = document.querySelector(".up");
     const arrDown = document.querySelector(".down");
@@ -39,12 +56,18 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider++;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        thumPart[opacity].classList.remove("opa")
+        opacity++;
+        thumPart[opacity].classList.add("opa")
     
     //BONUS 1: Quando la posizione slider è uguale o maggiore di 4 ritornerà alla poszione 0   
     } else if (posizioneSlider >= 4) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider=0;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        thumPart[opacity].classList.remove("opa")
+        opacity = 0;
+        thumPart[opacity].classList.add("opa")
     }
 });
 
@@ -54,11 +77,17 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider--;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        thumPart[opacity].classList.remove("opa")
+        opacity--;
+        thumPart[opacity].classList.add("opa")
 
     //BONUS 1: Quando la posizione slider è uguale o minore di 0 ritornerà alla poszione 4     
     } else if (posizioneSlider <= 0) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider = 4;
         immaginePartenza[posizioneSlider].classList.add("visibile")
+        thumPart[opacity].classList.remove("opa")
+        opacity = 4;
+        thumPart[opacity].classList.add("opa")
     }
 });
