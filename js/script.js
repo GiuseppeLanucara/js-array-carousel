@@ -39,7 +39,13 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider++;
         immaginePartenza[posizioneSlider].classList.add("visibile")
-    }});
+    
+    } else if (posizioneSlider >= 4) {
+        immaginePartenza[posizioneSlider].classList.remove("visibile");
+        posizioneSlider=0;
+        immaginePartenza[posizioneSlider].classList.add("visibile")
+    }
+});
 
     //al click sulla freccia in indietro le immagini verranno cambiate fino a quando non saremo arrivati alla prima immagine e quindi non potremo più andare indietro
     arrDown.addEventListener("click", function () { 
@@ -48,4 +54,9 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         posizioneSlider--;
         immaginePartenza[posizioneSlider].classList.add("visibile")
 
-    }});
+    } else if (posizioneSlider <= 0) {
+        immaginePartenza[posizioneSlider].classList.remove("visibile");
+        posizioneSlider = 4;
+        immaginePartenza[posizioneSlider].classList.add("visibile")
+    }
+});
