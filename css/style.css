@@ -26,6 +26,10 @@ img {
     
 }
 
+.image {
+    display: none;
+}
+
 .up {
     position: absolute;
     top: 20px;
@@ -50,4 +54,12 @@ img {
     border-radius: 50%;
     color: rgb(31, 29, 29);
     object-fit: contain;
+}
+
+.visibile {
+    display: block;
+}
+
+.nonvisibile {
+    display: none;
 }

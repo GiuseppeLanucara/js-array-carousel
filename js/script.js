@@ -10,14 +10,25 @@ Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella mile
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.*/
 
 //array con all'interno le img
-
 const raccoltaImmagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
 
-const contenitore = document.getElementsByClassName("raccolta");
+const contenitore = document.querySelector(".raccolta");
 console.log(contenitore);
 
 for (let i = 0; i < raccoltaImmagini.length; i++) {
-    const element = `<img src="${raccoltaImmagini[i]}" alt="">`
+    const element = `<img class="image" src="${raccoltaImmagini[i]}" alt="">`
     console.log(element);
     contenitore.innerHTML += element;
 };
+
+//prima immagine visibile in partenza 
+    const immaginePartenza = document.getElementsByClassName("image");
+    console.log(immaginePartenza);
+
+    immaginePartenza[0].classList.add("visibile");
+
+    const arrUp = document.getElementById("arrup");
+    const arrDown = document.getElementById("arrdown");
+
+    arrUp.addEventListener("click", function () { 
+        immaginePartenza ++ });
