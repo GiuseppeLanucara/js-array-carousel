@@ -12,9 +12,11 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 //array con all'interno le img
 const raccoltaImmagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
 
+//creato una variabile che prende l'elemento html con la classe raccolta CSS
 const contenitore = document.querySelector(".raccolta");
 console.log(contenitore);
 
+//ciclo FOR 
 for (let i = 0; i < raccoltaImmagini.length; i++) {
     const element = `<img class="image" src="${raccoltaImmagini[i]}" alt="">`
     console.log(element);
@@ -31,6 +33,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
     const arrUp = document.querySelector(".up");
     const arrDown = document.querySelector(".down");
 
+    //al click sulla freccia in avanti le immagini verranno cambiate fino a quando non sarà arrivata all'ultima ed il bottone non andraà più avanti
     arrUp.addEventListener("click", function () { 
         if (posizioneSlider < 4) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
@@ -38,6 +41,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         immaginePartenza[posizioneSlider].classList.add("visibile")
     }});
 
+    //al click sulla freccia in indietro le immagini verranno cambiate fino a quando non saremo arrivati alla prima immagine e quindi non potremo più andare indietro
     arrDown.addEventListener("click", function () { 
         if (posizioneSlider > 0) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
