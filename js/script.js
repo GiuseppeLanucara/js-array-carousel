@@ -40,6 +40,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         posizioneSlider++;
         immaginePartenza[posizioneSlider].classList.add("visibile")
     
+    //BONUS 1: Quando la posizione slider è uguale o maggiore di 4 ritornerà alla poszione 0   
     } else if (posizioneSlider >= 4) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider=0;
@@ -54,6 +55,7 @@ for (let i = 0; i < raccoltaImmagini.length; i++) {
         posizioneSlider--;
         immaginePartenza[posizioneSlider].classList.add("visibile")
 
+    //BONUS 1: Quando la posizione slider è uguale o minore di 0 ritornerà alla poszione 4     
     } else if (posizioneSlider <= 0) {
         immaginePartenza[posizioneSlider].classList.remove("visibile");
         posizioneSlider = 4;
