@@ -1,13 +1,16 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BACKGROUND */
 body {
     background-color: rgb(27, 78, 78, .7);
 }
 
+/* CONTAINER DEL DIV RACCOLTA */
 .container {
     width: 80vw;
     height: 80vh;
@@ -15,10 +18,12 @@ body {
     margin-top: 50px;
 }
 
+/* CONTAINER IMMAGINI */
 .raccolta {
     position: relative;
 }
 
+/* DIMENSIONI IMG */
 img {
     width: 80vw;
     height: 80vh;
@@ -26,10 +31,23 @@ img {
     
 }
 
+/* DISPLAY NONE DEFAULT */
 .image {
     display: none;
 }
 
+/* DISPLAY BLOCK */
+.visibile {
+    display: block;
+}
+
+/* DISPLAY NONE DOPO CHE SI PREME IL BOTTONE */
+.nonvisibile {
+    display: none;
+}
+
+
+/* BOTTONE UP */
 .up {
     position: absolute;
     top: 20px;
@@ -43,6 +61,7 @@ img {
     object-fit: contain;
 }
 
+/* BOTTONE DOWN */
 .down {
     position: absolute;
     bottom: 25px;
@@ -56,10 +75,5 @@ img {
     object-fit: contain;
 }
 
-.visibile {
-    display: block;
-}
 
-.nonvisibile {
-    display: none;
-}
+
